@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> AL's Portfolio Website</title>
+  <link rel="stylesheet" href="main.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div class="intro-screen" id="intro-screen">
+    <img src="assets/logo.gif" alt="Loading Logo" class="intro-logo" />
+  </div>
+  
+  <nav class="navigation-bar hidden" id="main-nav">
+    <ul class = "logo">
+      <img src="assets/logo.gif" alt="Logo" class="logo" />
+    </ul>
+    <ul class="navigation">
+      <li class="navigation__item navigation__item--active"><a href="#hero">Home</a></li>
+      <li class="navigation__item"><a href="#about">About</a></li>
+      <li class="navigation__item"><a href="#projects">Projects</a></li>
+      <li class="navigation__item"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="site-content">
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+      <div class="canvas">
+        <canvas class="connecting-dots"></canvas>
+      </div>
+      <div class="heading">
+        <div class="heading__line-1">Hello, I'm <span>Al Glenrey Tilacas</span></div>
+        <div class="heading__line-2">CS Student | Aspiring UI/UX & Front-End Developer</div>
+      </div>
+    </div>
+
+    <div class="main-bg">
+      <div class="canvas">
+        <canvas class="canvas-2"></canvas>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2 class="about__heading section-heading">About</h2>
+      <div class="about__content">
+        <div class="profile">
+
+          <p class="profile__info">Hi, I’m Al Glenrey Tilacas, a third-year Computer Science student who enjoys working on front-end development and UI/UX design. I like building interfaces that aren’t just nice to look at; they should also feel good to use. I care about design that makes sense and genuinely respects the people using it.
+
+            For me, it’s not just about writing code or building something that works. It’s about creating something that feels right and solves real problems. I want the things I build to make someone’s day a little easier, more intuitive, or even a bit more enjoyable.</p>
+        </div>
+
+        <div class="skills">
+          <div class="skills__row">
+            <div class="skills__item skills__item--affinity">
+              <img src="assets/affinity.png" alt="Affinity" />
+              <div class="skills__item-name">Affinity</div>
+            </div>
+            <div class="skills__item skills__item--figma">
+              <img src="assets/figma.png" alt="Flutter" />
+              <div class="skills__item-name">Figma</div>
+            </div>
+            </div>
+          <div class="skills__row">
+            <div class="skills__item skills__item--HTML">
+              <img src="assets/html.png" alt="HTML" />
+              <div class="skills__item-name">HTML</div>
+            </div>
+            <div class="skills__item skills__item--flutter">
+              <img src="assets/flutter.png" alt="Flutter" />
+              <div class="skills__item-name">Flutter</div>
+            </div>
+            <div class="skills__item skills__item--python">
+              <img src="assets/python.png" alt="Python" />
+              <div class="skills__item-name">Python</div>
+            </div>
+          </div>
+          <div class="skills__row">
+            <div class="skills__item skills__item--js">
+              <img src="assets/javascript.png" alt="JavaScript" />
+              <div class="skills__item-name">JavaScript</div>
+            </div>
+            <div class="skills__item skills__item--css">
+              <img src="assets/css.png" alt="CSS" />
+              <div class="skills__item-name">CSS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+<section class="projects" id="projects">
+  <h2 class="projects__heading section-heading">Projects</h2>
+
+  <!-- Project 1 (Left) -->
+  <div class="project project-left">
+      <div class="project__image-container">
+        <img src="assets/smartcy.png" alt="Smart CY" />
+      </div>
+    <div class="project__info">
+      <h3 class="project__title">Smart CY<br/>Container Yard Management App</h3>
+      <p class="project__description">SMART CY is an Android-based mobile application optimized for tablets, specifically designed to streamline and automate container yard operations. Built using Flutter for the frontend, .NET for backend services, integrated with Firebase Authentication for secure user management, and utilizing MS SQL for reliable cloud-based database operations, SMART CY provides real-time container tracking, efficient transaction management, and increased yard visibility.</p>
+    </div>
+  </div>
+
+  <!-- Project 2 (Right) -->
+  <div class="project project-right">
+      <div class="project__image-container">
+        <img src="assets/tigom.png" alt="Tigom" />
+      </div>
+    <div class="project__info">
+      <h3 class="project__title">TIGOM<br />Money Tracker App</h3>
+      <p class="project__description">A user-friendly personal finance application developed in Swift, integrated with SQL for efficient data management. The app helps users easily track expenses, categorize spending, and manage budgets through intuitive interfaces and reliable database interactions.</p>
+    </div>
+  </div>
+  
+  <!-- Project 3 (Left) -->
+  <div class="project project-left">
+    <div class="project__image-container">
+      <img src="assets/cooking.png" alt="Smart CY" />
+    </div>
+  <div class="project__info">
+    <h3 class="project__title">Cooking Ina Mo <br/> FSM Integrated Typing Game</h3>
+    <p class="project__description">An engaging culinary-themed typing game developed using Python and the Pygame library. The game utilizes Finite State Machines (FSMs) to handle dynamic state transitions, managing user interactions as players rapidly type food-related words to prepare dishes in a lively kitchen scenario.
+</p>
+  </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2 class="contact__heading section-heading">Contact</h2>
+    <p class="contact__text">
+      Whether you have a question or simply want to connect, feel free to reach out. I’ll do my best to respond as soon as possible.
+    </p>
+  
+    <!-- Contact form -->
+    <form action="https://formsubmit.io/send/altilacas@gmail.com" method="POST" class="contact__form">
+      <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you" />
+      
+      <input class="contact__form-name" name="name" id="contact-name" placeholder="Name" required />
+      <input class="contact__form-email" name="email" id="contact-email" type="email" placeholder="Email" required />
+      <textarea class="contact__form-message" name="message" id="contact-message" placeholder="Message" required></textarea>
+  
+      <!-- reCAPTCHA widget -->
+      <div class="g-recaptcha" data-sitekey=""></div>
+  
+      <button type="submit" class="contact__form-submit project__live-2" id="form-submit">Submit</button>
+    </form>
+  </section>
+  
+  <!-- Load reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="#hero">
+        <div class="return-home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24">
+            <path fill="#fafafa" d="M17.707 10.293l-5-5c-.391-.391-1.024-.391-1.414 0l-5 5a1 1 0 001.414 1.414L12 7.414l4.293 4.293a1 1 0 001.414-1.414zM17.707 17.293l-5-5a1 1 0 00-1.414 0l-5 5a1 1 0 001.414 1.414L12 13.414l4.293 4.293a1 1 0 001.414-1.414z"/>
+          </svg>
+        </div>
+      </a>
+      <div class="socials">
+        <a href="https://github.com/Alglenrey" target="_blank"><div class="socials__github"><img src="assets/git.png" alt="GitHub" /></div></a>
+        <a href="mailto:aatilacas@up.edu.ph" target="_blank"><div class="socials__email"><img src="assets/email.png" alt="Email" /></div></a>
+      </div>
+      <p class="name">AL GLENREY TILACAS</p>
+    </footer>
+  </div>
+  
+</body>
+</html>
