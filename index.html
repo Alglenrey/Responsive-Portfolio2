@@ -139,11 +139,9 @@
     </p>
   
     <!-- Contact form -->
-    <form action="https://formsubmit.co/your@email.com" method="POST" class="contact__form">
-      <input type="hidden" name="_redirect" value="https://yourwebsite.com/thank-you" />
-      
-      <input class="contact__form-name" name="name" id="contact-name" placeholder="Name" required />
-      <input class="contact__form-email" name="email" id="contact-email" type="email" placeholder="Email" required />
+    <form id="contact-form" class="contact__form">
+      <input class="contact__form-name" name="user_name" id="contact-name" placeholder="Name" required />
+      <input class="contact__form-email" name="user_email" id="contact-email" type="email" placeholder="Email" required />
       <textarea class="contact__form-message" name="message" id="contact-message" placeholder="Message" required></textarea>
   
       <!-- reCAPTCHA widget -->
@@ -153,10 +151,38 @@
     </form>
   </section>
   
-  <!-- Load reCAPTCHA script -->
+  <!-- Load reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   
-
+  <!-- Load EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script>
+    (function() {
+      emailjs.init("LsFCzC8raOn2H_XBg"); // 🔥 Replace with your EmailJS Public Key
+    })();
+  
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Stop default form submit
+  
+      // reCAPTCHA validation
+      var recaptchaResponse = grecaptcha.getResponse();
+      if (!recaptchaResponse) {
+        alert('Please verify that you are not a robot.');
+        return;
+      }
+  
+      emailjs.sendForm('service_nws7g0c', 'template_celkw3b', this)
+        .then(function() {
+            alert('Message sent successfully!');
+            document.getElementById('contact-form').reset();
+            grecaptcha.reset(); // Reset captcha after send
+        }, function(error) {
+            alert('FAILED to send message: ' + error.text);
+        });
+    });
+  </script>
+  
 
     <!-- Footer -->
     <footer class="footer">
